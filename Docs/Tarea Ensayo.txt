@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Para la elaboracion del ensayo encontre un articulo que me parecio un poco interesante ya que estan las mismas palabras ,
 contribuciones que hizo y planteo en su momento linus torvalds quien fue el creador de Linux que muchas fuentes afirman que decir:"Linux"
 esta mal dicho no se trabaja sobre "Linux" sino GNU/Linux ya que manejas una distribucion basada en Linux ya con un poco de panorama
@@ -26,3 +27,33 @@ son las que deberian de ser mas conocidas(no tenia idea de quien era Richard Sta
 Desconozco completamente como viven su dia a dia estas grandiosas personas que hacen posible una red libre para la gente que conoce del tema 
 y les hace llegar todo con mayor accesibilidad y fiabilidad 
 Muchas felicitaciones a estas 2 personas por sus contribuciones a la red que compartimos ahora y en un futuro...! 
+=======
+Para la elaboracion del ensayo encontre un articulo que me parecio un poco interesante ya que estan las mismas palabras ,
+contribuciones que hizo y planteo en su momento linus torvalds quien fue el creador de Linux que muchas fuentes afirman que decir:"Linux"
+esta mal dicho no se trabaja sobre "Linux" sino GNU/Linux ya que manejas una distribucion basada en Linux ya con un poco de panorama
+solo de sintaxis partiremos en este punto, pues linus torvalds estaba cursando la universidad cuando se le ocurrio momentaneamente
+hacer en sus tiempos libres un sistema operativo que pretendia que no iba a ser tan profesional como gnu, en ese momento el preguntaba a los usuarios usando minix
+que pueden destacar del sistema, asi como tambien decir sus contras ya que el queria hacer un sistema completamente libre y la idea era hacer lo que nadie 
+habia hecho hasta ese punto, esto acontecia aproximadamente en 1991 cuando el estaba en la universidad, haciendo el SO, recibia correos en los cuales exponia 
+que queria puntos de vista para tomarlos en cuenta para su sistema, el fue modificandolo hasta ir metiendo mejoras e ir empezando con bash y vio que 
+su sistema estaba soportando bash fuera de que su computadora tuviera un rendimiento adecuado, se percato que su programa se podia adaptar a bash; consigo tambien
+incorporo GCC(GNU compiler collection) en versiones menores pues realmente estaba teniendo mucho exito y queria que usuarios probaran lo que estaba llevando a cabo, 
+mientras estaba haciendo testing acerca de su OS hubo algo que se hizo notar, pues miles de usuarios estaban solamente usando GNU una de las grandes 
+interrogantes que tenia era porque todos estaban usando ese compilador y no otros como C, ya que el uso la mayor parte en C, mientras mas se adentraba y modificaba
+muchos usuarios se ganaba puesto que tenia muchisimo exito en cada cosa que hacia, pues estaba haciendo un gran trabajo con un programa capaz de soportar lo que 
+la competencia le daba muchisimo problema, ademas de que ERA GRATIS; entonces se viene la epoca de muchisimo exito para torvalds, lo que un dia empezo como hobbie
+termino como su futuro y a muy buen tiempo (pues estaba en la universidad).
+Ahora que tenemos un poco de panorama acerca de quien fue linus torvalds e inicios de linux pese a que era un proyecto de software libre, pues cualquier persona
+podia descargarlo, pero....En donde estaba la ganancia, esfuerzo de linus torvalds? Entonces viene otro gran personaje con muchisimas menciones honorificas a lo 
+largo de toda su vida el es Richard Stallman pues es el Fundador/Presidente de la FSF (Free Software Foundation) El es la persona encargada de esta
+bonita empresa encargada de juntar fondos para todos aquellos programadores que tengan un gran corazon como para hacer software sin fines de lucro.
+y promover con ello el software libre, para concientizar que juntos pueden llevar una comunidad realmente sana, aunque en el mundo realmente puede haber mucha
+gente que se lucrara al fin y al cabo no todo el mundo es Richard Stallman que pretende hacer siempre labores sin fines de lucro.
+
+Como dato personal, si veo esplendidamente bien que hagan estas labores del software libre, pero de algo tienen que comer,
+consultado la fuente de ingresos, me doy cuenta que es realmente muy poco lo que ganan para una red de programadores realmente siento que personas como estas
+son las que deberian de ser mas conocidas(no tenia idea de quien era Richard Stallman) no por robarse ideas... sin hacer menciones jiji 
+Desconozco completamente como viven su dia a dia estas grandiosas personas que hacen posible una red libre para la gente que conoce del tema 
+y les hace llegar todo con mayor accesibilidad y fiabilidad 
+Muchas felicitaciones a estas 2 personas por sus contribuciones a la red que compartimos ahora y en un futuro...! 
+>>>>>>> c1d7458e0909439e1fb4beb067be8f093da184ac
