@@ -1,0 +1,11 @@
+C:\Users\bab2p\source\repos\PV2doParcial\PV2doParcial\bin\Debug\netcoreapp3.0\PV2doParcial.exe
+C:\Users\bab2p\source\repos\PV2doParcial\PV2doParcial\bin\Debug\netcoreapp3.0\PV2doParcial.deps.json
+C:\Users\bab2p\source\repos\PV2doParcial\PV2doParcial\bin\Debug\netcoreapp3.0\PV2doParcial.runtimeconfig.json
+C:\Users\bab2p\source\repos\PV2doParcial\PV2doParcial\bin\Debug\netcoreapp3.0\PV2doParcial.runtimeconfig.dev.json
+C:\Users\bab2p\source\repos\PV2doParcial\PV2doParcial\bin\Debug\netcoreapp3.0\PV2doParcial.dll
+C:\Users\bab2p\source\repos\PV2doParcial\PV2doParcial\bin\Debug\netcoreapp3.0\PV2doParcial.pdb
+C:\Users\bab2p\source\repos\PV2doParcial\PV2doParcial\obj\Debug\netcoreapp3.0\PV2doParcial.csprojAssemblyReference.cache
+C:\Users\bab2p\source\repos\PV2doParcial\PV2doParcial\obj\Debug\netcoreapp3.0\PV2doParcial.AssemblyInfoInputs.cache
+C:\Users\bab2p\source\repos\PV2doParcial\PV2doParcial\obj\Debug\netcoreapp3.0\PV2doParcial.AssemblyInfo.cs
+C:\Users\bab2p\source\repos\PV2doParcial\PV2doParcial\obj\Debug\netcoreapp3.0\PV2doParcial.dll
+C:\Users\bab2p\source\repos\PV2doParcial\PV2doParcial\obj\Debug\netcoreapp3.0\PV2doParcial.pdb
