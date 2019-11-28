@@ -50,7 +50,7 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
 
         lTitulo.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         lTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        lTitulo.setText("METODO DE BISECCION");
+        lTitulo.setText("TEOREMA DE ROLLE");
         getContentPane().add(lTitulo);
         lTitulo.setBounds(10, 11, 480, 30);
 
@@ -69,7 +69,7 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
 
         lbTexto.setText("Llena los campos que necesites para operar(Si no necesitas alguno llenalo con un cero):");
         pFondoBlanco.add(lbTexto);
-        lbTexto.setBounds(20, 10, 630, 14);
+        lbTexto.setBounds(20, 10, 630, 16);
 
         txtSexta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,35 +126,35 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
 
         lbPrimera.setText("x");
         pFondoBlanco.add(lbPrimera);
-        lbPrimera.setBounds(520, 50, 34, 14);
+        lbPrimera.setBounds(520, 50, 34, 16);
 
         lbSexta.setText("x^6");
         pFondoBlanco.add(lbSexta);
-        lbSexta.setBounds(70, 50, 20, 14);
+        lbSexta.setBounds(70, 50, 21, 16);
 
         lbQuinta.setText("x^5");
         pFondoBlanco.add(lbQuinta);
-        lbQuinta.setBounds(160, 50, 34, 14);
+        lbQuinta.setBounds(160, 50, 34, 16);
 
         lbCuarta.setText("x^4");
         pFondoBlanco.add(lbCuarta);
-        lbCuarta.setBounds(250, 50, 34, 14);
+        lbCuarta.setBounds(250, 50, 34, 16);
 
         lbTercera.setText("x^3");
         pFondoBlanco.add(lbTercera);
-        lbTercera.setBounds(340, 50, 34, 14);
+        lbTercera.setBounds(340, 50, 34, 16);
 
         lbSegunda.setText("x^2");
         pFondoBlanco.add(lbSegunda);
-        lbSegunda.setBounds(430, 50, 34, 14);
+        lbSegunda.setBounds(430, 50, 34, 16);
 
         lbIntervalo.setText("Intervalo");
         pFondoBlanco.add(lbIntervalo);
-        lbIntervalo.setBounds(50, 100, 180, 14);
+        lbIntervalo.setBounds(50, 100, 180, 16);
 
         lbPorcentaje.setText("Porcentaje de error:");
         pFondoBlanco.add(lbPorcentaje);
-        lbPorcentaje.setBounds(10, 180, 170, 14);
+        lbPorcentaje.setBounds(10, 180, 170, 16);
 
         txtPorcentaje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,7 +171,7 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
 
         lbDecimales.setText("Numero de decimales:");
         pFondoBlanco.add(lbDecimales);
-        lbDecimales.setBounds(50, 220, 160, 14);
+        lbDecimales.setBounds(50, 220, 160, 16);
 
         cbDecimales.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
         pFondoBlanco.add(cbDecimales);
@@ -192,11 +192,11 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
 
         lbA.setText("A");
         pFondoBlanco.add(lbA);
-        lbA.setBounds(20, 130, 20, 14);
+        lbA.setBounds(20, 130, 20, 16);
 
         lbB.setText("B");
         pFondoBlanco.add(lbB);
-        lbB.setBounds(90, 130, 34, 14);
+        lbB.setBounds(90, 130, 34, 16);
 
         txtB.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -216,7 +216,7 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
 
         lbConstante.setText("C");
         pFondoBlanco.add(lbConstante);
-        lbConstante.setBounds(600, 50, 30, 14);
+        lbConstante.setBounds(600, 50, 30, 16);
         pFondoBlanco.add(jSeparator2);
         jSeparator2.setBounds(0, 90, 660, 10);
 
