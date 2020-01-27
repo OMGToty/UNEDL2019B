@@ -1,11 +1,10 @@
+hola
+hola
 hans
 hans
 hans
 hans
 hans
-hans
-hans
-hans
-hans
-Las repetidas fueron: 1
+Las repetidas fueron: 2
+hola
 hans

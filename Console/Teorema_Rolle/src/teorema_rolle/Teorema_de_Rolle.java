@@ -1,11 +1,17 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package teorema_rolle;
 
-package metodos_numericos;
+import java.text.DecimalFormat;
 import java.util.*;
 import javax.swing.JOptionPane;
+import java.math.*;
 
 public class Teorema_de_Rolle extends javax.swing.JFrame {
 
- 
     public Teorema_de_Rolle() {
         initComponents();
     }
@@ -46,11 +52,13 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
         pFondoAmarillo = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(650, 400));
+        setSize(new java.awt.Dimension(500, 500));
         getContentPane().setLayout(null);
 
         lTitulo.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         lTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        lTitulo.setText("TEOREMA DE ROLLE");
+        lTitulo.setText("METODO DE BISECCION");
         getContentPane().add(lTitulo);
         lTitulo.setBounds(10, 11, 480, 30);
 
@@ -69,7 +77,7 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
 
         lbTexto.setText("Llena los campos que necesites para operar(Si no necesitas alguno llenalo con un cero):");
         pFondoBlanco.add(lbTexto);
-        lbTexto.setBounds(20, 10, 630, 16);
+        lbTexto.setBounds(20, 10, 630, 14);
 
         txtSexta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,35 +134,35 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
 
         lbPrimera.setText("x");
         pFondoBlanco.add(lbPrimera);
-        lbPrimera.setBounds(520, 50, 34, 16);
+        lbPrimera.setBounds(520, 50, 34, 14);
 
         lbSexta.setText("x^6");
         pFondoBlanco.add(lbSexta);
-        lbSexta.setBounds(70, 50, 21, 16);
+        lbSexta.setBounds(70, 50, 20, 14);
 
         lbQuinta.setText("x^5");
         pFondoBlanco.add(lbQuinta);
-        lbQuinta.setBounds(160, 50, 34, 16);
+        lbQuinta.setBounds(160, 50, 34, 14);
 
         lbCuarta.setText("x^4");
         pFondoBlanco.add(lbCuarta);
-        lbCuarta.setBounds(250, 50, 34, 16);
+        lbCuarta.setBounds(250, 50, 34, 14);
 
         lbTercera.setText("x^3");
         pFondoBlanco.add(lbTercera);
-        lbTercera.setBounds(340, 50, 34, 16);
+        lbTercera.setBounds(340, 50, 34, 14);
 
         lbSegunda.setText("x^2");
         pFondoBlanco.add(lbSegunda);
-        lbSegunda.setBounds(430, 50, 34, 16);
+        lbSegunda.setBounds(430, 50, 34, 14);
 
         lbIntervalo.setText("Intervalo");
         pFondoBlanco.add(lbIntervalo);
-        lbIntervalo.setBounds(50, 100, 180, 16);
+        lbIntervalo.setBounds(50, 100, 180, 14);
 
         lbPorcentaje.setText("Porcentaje de error:");
         pFondoBlanco.add(lbPorcentaje);
-        lbPorcentaje.setBounds(10, 180, 170, 16);
+        lbPorcentaje.setBounds(10, 180, 170, 14);
 
         txtPorcentaje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,7 +179,7 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
 
         lbDecimales.setText("Numero de decimales:");
         pFondoBlanco.add(lbDecimales);
-        lbDecimales.setBounds(50, 220, 160, 16);
+        lbDecimales.setBounds(50, 220, 160, 14);
 
         cbDecimales.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
         pFondoBlanco.add(cbDecimales);
@@ -192,11 +200,11 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
 
         lbA.setText("A");
         pFondoBlanco.add(lbA);
-        lbA.setBounds(20, 130, 20, 16);
+        lbA.setBounds(20, 130, 20, 14);
 
         lbB.setText("B");
         pFondoBlanco.add(lbB);
-        lbB.setBounds(90, 130, 34, 16);
+        lbB.setBounds(90, 130, 34, 14);
 
         txtB.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -216,7 +224,7 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
 
         lbConstante.setText("C");
         pFondoBlanco.add(lbConstante);
-        lbConstante.setBounds(600, 50, 30, 16);
+        lbConstante.setBounds(600, 50, 30, 14);
         pFondoBlanco.add(jSeparator2);
         jSeparator2.setBounds(0, 90, 660, 10);
 
@@ -257,15 +265,14 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    double dIntervaloA =0;
-    double dIntervaloB =0;
-    int plus=0;
     double dSexta;
     double dQuinta = 0;
     double dCuarta = 0;
     double dTercera = 0;
     double dSegunda = 0;
     double dPrimera = 0;
+    double dIntervaloA = 0;
+    double dIntervaloB = 0;
     double dPorcentajeError = 0;
     int iDecimales = 0;
     double dConstate = 0;
@@ -273,19 +280,19 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
     double dFuncionB = 0;
     double dFuncionPm = 0;
     double dFunciones = 0;
-    double auxcoordenadainicial =0 ;
-    double auxcoordenadafinal = 0;
+    double auxfuncionA = 0;
+    double auxfuncionB = 0;
     double pm = 0;
-    double pendiente = 0 ;
+    double pendiente = 0;
     double coordenadainicial = 0;
     double coordenadafinal = 0;
-    double Tanteta=0;
-    double valorteta=0;
-    double error=100;
+    double Tanteta = 0;
+    double valorteta = 0;
+    double error = 100;
     boolean finn = false;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
-                dSexta = Double.parseDouble(txtSexta.getText().trim());
+            dSexta = Double.parseDouble(txtSexta.getText().trim());
             dQuinta = Double.parseDouble(txtQuinta.getText().trim());
             dCuarta = Double.parseDouble(txtCuarta.getText().trim());
             dTercera = Double.parseDouble(txtTercera.getText().trim());
@@ -293,8 +300,8 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
             dPrimera = Double.parseDouble(txtPrimera.getText().trim());
             dConstate = Double.parseDouble(txtConstante.getText().trim());
 
-            dIntervaloA = (Double.parseDouble(txtA.getText().trim()));
-            dIntervaloB = (Double.parseDouble(txtB.getText().trim()));
+            dIntervaloA = Double.parseDouble(txtA.getText().trim());
+            dIntervaloB = Double.parseDouble(txtB.getText().trim());
             iDecimales = Integer.parseInt(cbDecimales.getSelectedItem().toString());
 
             dPorcentajeError = Double.parseDouble(txtPorcentaje.getText());
@@ -303,54 +310,107 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Hay un error en tus datos o hay un campo vacio");
         }
 //funciones para los intervalos
-        
+
         coordenadainicial = (coordenadainicial + dIntervaloA);
         coordenadafinal = (coordenadafinal + dIntervaloB);
-        auxcoordenadainicial = coordenadainicial;
-        auxcoordenadafinal = coordenadafinal;
-        System.out.println("intervalo A: "+ coordenadainicial);//2
-        System.out.println("intervalo B: "+ coordenadafinal);//8
+
+        System.out.println("intervalo A: " + coordenadainicial);//2
+        System.out.println("intervalo B: " + coordenadafinal);//8
         dFuncionA = (dSexta * (Math.pow(dIntervaloA, 6))) + (dQuinta * (Math.pow(dIntervaloA, 5))) + (dCuarta * (Math.pow(dIntervaloA, 4))) + (dTercera * (Math.pow(dIntervaloA, 3))) + (dSegunda * (Math.pow(dIntervaloA, 2))) + (dPrimera * dIntervaloA) + (dConstate);
         System.out.println("f(a) = " + dFuncionA);//-2
         dFuncionB = (dSexta * (Math.pow(dIntervaloB, 6))) + (dQuinta * (Math.pow(dIntervaloB, 5))) + (dCuarta * (Math.pow(dIntervaloB, 4))) + (dTercera * (Math.pow(dIntervaloB, 3))) + (dSegunda * (Math.pow(dIntervaloB, 2))) + (dPrimera * dIntervaloB) + (dConstate);
         System.out.println("f(b) = " + dFuncionB);//28
         pm = (coordenadainicial + coordenadafinal) / 2;
-        System.out.println("Punto medio: "+pm);
-        pendiente = ((dFuncionB) - (dFuncionA)) / (coordenadafinal - coordenadainicial);
-        System.out.println("Pendiente: "+pendiente);
+        System.out.println("Punto medio: " + pm);
+        pendiente = (dFuncionB - dFuncionA) / (coordenadafinal - coordenadainicial);
+        System.out.println("Pendiente: " + pendiente);
         Tanteta = Math.atan(pendiente);
-        valorteta = Math.toDegrees(Tanteta);
-        System.out.println("Tangente de teta: "+valorteta);
-        System.out.println("Error: "+error+" %");//el que debe disminuir
-        System.out.println("Termina la iteracion numero : "+plus++);
-        coordenadafinal = pm;
-        dIntervaloB =pm;
-        //2da iteracion
-           while(error>dPorcentajeError){
-        System.out.println("intervalo A: "+ coordenadainicial);//2
-        System.out.println("intervalo B: "+ coordenadafinal);//8
-        dFuncionA = (dSexta * (Math.pow(dIntervaloA, 6))) + (dQuinta * (Math.pow(dIntervaloA, 5))) + (dCuarta * (Math.pow(dIntervaloA, 4))) + (dTercera * (Math.pow(dIntervaloA, 3))) + (dSegunda * (Math.pow(dIntervaloA, 2))) + (dPrimera * dIntervaloA) + (dConstate);
-        System.out.println("f(a) = " + dFuncionA);//-2
-        dFuncionB = (dSexta * (Math.pow(dIntervaloB, 6))) + (dQuinta * (Math.pow(dIntervaloB, 5))) + (dCuarta * (Math.pow(dIntervaloB, 4))) + (dTercera * (Math.pow(dIntervaloB, 3))) + (dSegunda * (Math.pow(dIntervaloB, 2))) + (dPrimera * dIntervaloB) + (dConstate);
-        System.out.println("f(b) = " + dFuncionB);//28
-        if(dFuncionA<0&&dFuncionB<0){
-            coordenadainicial = coordenadafinal;
-            coordenadafinal = pm;
+        Math.round(valorteta);
+
+        do{
+        if (iDecimales == 1) {
+            DecimalFormat format = new DecimalFormat("#.#");
+            System.out.println("");
+            valorteta = Math.toDegrees(Tanteta);
+            System.out.println("Tangente de teta: " + format.format(valorteta));
+            System.out.println("Error: " + error + " %");
+            System.out.println("Decimales: " + iDecimales);
+        } else {
         }
-       pm = (coordenadainicial + coordenadafinal) / 2;
-        System.out.println("Punto medio: "+pm);
-        pendiente = ((dFuncionB) - (dFuncionA)) / (coordenadafinal - coordenadainicial);
-        System.out.println("Pendiente: "+pendiente);
-        Tanteta = Math.atan(pendiente);
-        valorteta = Math.toDegrees(Tanteta);
-        System.out.println("Tangente de teta: "+valorteta);
-        error = ((pm - coordenadafinal) / pm) *100; 
-        error = Math.abs(error);
-        System.out.println("Error: "+error+" %");//el que debe disminuir
-        System.out.println("Termina la iteracion numero : "+plus++);
-           }
-        
-        
+        if (iDecimales == 2) {
+            DecimalFormat format = new DecimalFormat("#.##");
+            System.out.println("");
+            valorteta = Math.toDegrees(Tanteta);
+            System.out.println("Tangente de teta: " + format.format(valorteta));
+            System.out.println("Error: " + error + " %");
+            System.out.println("Decimales: " + iDecimales);
+        } else {
+        }
+        if (iDecimales == 3) {
+            DecimalFormat format = new DecimalFormat("#.###");
+            System.out.println("");
+            valorteta = Math.toDegrees(Tanteta);
+            System.out.println("Tangente de teta: " + format.format(valorteta));
+            System.out.println("Error: " + error + " %");
+            System.out.println("Decimales: " + iDecimales);
+        } else {
+        }
+        if (iDecimales == 4) {
+            DecimalFormat format = new DecimalFormat("#.####");
+            System.out.println("");
+            valorteta = Math.toDegrees(Tanteta);
+            System.out.println("Tangente de teta: " + format.format(valorteta));
+            System.out.println("Error: " + error + " %");
+            System.out.println("Decimales: " + iDecimales);
+        } else {
+        }
+        if (iDecimales == 5) {
+            DecimalFormat format = new DecimalFormat("#.#####");
+            System.out.println("");
+            valorteta = Math.toDegrees(Tanteta);
+            System.out.println("Tangente de teta: " + format.format(valorteta));
+        } else {
+        }
+        if (iDecimales == 6) {
+            DecimalFormat format = new DecimalFormat("#.######");
+            System.out.println("");
+            valorteta = Math.toDegrees(Tanteta);
+            System.out.println("Tangente de teta: " + format.format(valorteta));
+            System.out.println("Error: " + error + " %");
+            System.out.println("Decimales: " + iDecimales);
+        } else {
+        }
+        if (iDecimales == 7) {
+            DecimalFormat format = new DecimalFormat("#.#######");
+            System.out.println("");
+            valorteta = Math.toDegrees(Tanteta);
+            System.out.println("Tangente de teta: " + format.format(valorteta));
+            System.out.println("Error: " + error + " %");
+            System.out.println("Decimales: " + iDecimales);
+        } else {
+        }
+        if (iDecimales == 8) {
+            DecimalFormat format = new DecimalFormat("#.########");
+            System.out.println("");
+            valorteta = Math.toDegrees(Tanteta);
+            System.out.println("Tangente de teta: " + format.format(valorteta));
+            System.out.println("Error: " + error + " %");
+            System.out.println("Decimales: " + iDecimales);
+        } else {
+        }
+        if (iDecimales == 9) {
+            DecimalFormat format = new DecimalFormat("#.#########");
+            System.out.println("");
+            valorteta = Math.toDegrees(Tanteta);
+            System.out.println("Tangente de teta: " + format.format(valorteta));
+            System.out.println("Error: " + error + " %");
+            System.out.println("Decimales: " + iDecimales);
+        } else {
+        }
+        //valorteta = Math.toDegrees(Tanteta);
+
+        //System.out.println("Error: " + error + " %");
+        }while(dPorcentajeError!=error);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtSextaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSextaActionPerformed
@@ -430,41 +490,15 @@ public class Teorema_de_Rolle extends javax.swing.JFrame {
         char numero = evt.getKeyChar();
         if (Character.isLetter(numero) || Character.isSpaceChar(numero)) {
             evt.consume();
-        } // TODO add your handling code here:
+        }
     }//GEN-LAST:event_txtConstanteKeyTyped
 
     private void txtAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAActionPerformed
-     
+
     }//GEN-LAST:event_txtAActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Teorema_de_Rolle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Teorema_de_Rolle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Teorema_de_Rolle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Teorema_de_Rolle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Teorema_de_Rolle().setVisible(true);
