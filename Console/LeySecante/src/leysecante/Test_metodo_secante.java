@@ -1,6 +1,7 @@
 package leysecante;
 
 //Importamos librerias
+import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.JFrame;
 import java.awt.event.ActionEvent;
@@ -12,9 +13,16 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+
+
 public class Test_metodo_secante extends JFrame{
+    
+   
+    
+    
     //Declaracion de los JLabel
     private JLabel lblIngreso;
     private JLabel lblX6;
@@ -27,7 +35,8 @@ public class Test_metodo_secante extends JFrame{
     private JLabel lblInterB;
     private JLabel lblError;
     private JLabel lblDecimal;
-    private JLabel img;
+    private JLabel etiqueta;
+    
     
     //Declaramos los comboBox
     private JComboBox cbxOperador7;
@@ -53,10 +62,6 @@ public class Test_metodo_secante extends JFrame{
     
     //Declaramos los botones
     private JButton btnCalcular;
-    //Panel
-   
-    
-    
     //Creamos variables para comprobar los valores de nuestra ecuacion y nuestros demas datos
         private String compX6;
         private String compX5;
@@ -94,18 +99,25 @@ public class Test_metodo_secante extends JFrame{
         private String Decimales;
     
     private Test_metodo_secante(){
-        Image imagen = new ImageIcon(getClass().getResource("Mia.jpg")).getImage();
+        
         
         //setSize(930, 230); //Tamaño
+        
 	setTitle(" Método de la Secante "); //Titulo
         setLayout(null);
-        setBounds(30, 30, 1050, 300); //Margenes
+        setBounds(30, 30, 1080,720); //Margenes
+        
         //setLocation(500, 200); //Locacion en la pantalla
         //setResizable(true); //Da la opcion de agrandar la ventana (habilitar el boton maximizar)
         //setLayout(new GridLayout(5,3,5,10)); //Dar formato a la ventana (Filas, columnas)
         
         //Creamos los JLabel
-        lblIngreso = new JLabel("Ingrese los datos que se le indiquen");
+        etiqueta = new JLabel(new ImageIcon(getClass().getResource("Mia.jpg")));
+        etiqueta.setBounds(20,20,800,700);
+        etiqueta.setLocation(150,150);
+        etiqueta.setVisible(true);
+        
+        lblIngreso = new JLabel("Llene los campos vacios con lo que se le indique");
             //Ecuacion
         lblX6 = new JLabel("x^6");
         lblX5 = new JLabel("x^5");
@@ -201,11 +213,12 @@ public class Test_metodo_secante extends JFrame{
         txtError.setBounds(120, 190, 60, 20);
         lblDecimal.setBounds(20, 220, 110, 20);
         cbxDecimales.setBounds(120, 220, 40, 20);
-            //Boon de calcular
+            //Boton de calcular
         btnCalcular.setBounds(910, 220, 100, 20);
-        
         //Añadimos los JLabel
+        add(etiqueta);
         add(lblIngreso);
+        
             //Ecuacion
         add(cbxOperador7);
         add(txtX6);
@@ -239,10 +252,11 @@ public class Test_metodo_secante extends JFrame{
         add(cbxDecimales);
         add(btnCalcular);
         setVisible(true); //Mostrar verntana
-        //pack();
+       // pack();
         
         //Objeto que conecta nuestras clases
         final Calcular_metodo_secante calcular = new Calcular_metodo_secante();
+        
         
         btnCalcular.addActionListener(new ActionListener() { //Agregamos una accion al boton
             @Override
@@ -358,6 +372,7 @@ public class Test_metodo_secante extends JFrame{
     private void validarCaracteres(JTextField campo) {
         campo.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
+                //Una validacion para que solo tome estos 11 caracteres 
                 char[] charValidos = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', ','};
                 int aux = 0;
                 for (int i = 0; i <= 11; i++) {
@@ -376,6 +391,7 @@ public class Test_metodo_secante extends JFrame{
     private void validarCaracteresIntervalos(JTextField campo) {
         campo.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
+                //Validacion en los intervalos para los caracteres 
                 char[] charValidos = {'1','2','3','4','5','6','7','8','9','0','.',',', '-'};
                 int aux = 0;
                 for (int i = 0; i <= 12; i++) {
@@ -394,7 +410,9 @@ public class Test_metodo_secante extends JFrame{
     public static void main(String[] args) {
         Test_metodo_secante ventana = new Test_metodo_secante();
         
-        //Llamamos los metodos para validar nuestros caracteres en
+        
+        //Llamamos los metodos para validar nuestros caracteres en cada txt
+        
         ventana.validarCaracteres(txtX6);
         ventana.validarCaracteres(txtX5);
         ventana.validarCaracteres(txtX4);
@@ -405,9 +423,7 @@ public class Test_metodo_secante extends JFrame{
         ventana.validarCaracteresIntervalos(txtIntervaloA);
         ventana.validarCaracteresIntervalos(txtIntervaloB);
         ventana.validarCaracteres(txtError);
-        
-        
-        
+         
     }
-    
+ 
 }

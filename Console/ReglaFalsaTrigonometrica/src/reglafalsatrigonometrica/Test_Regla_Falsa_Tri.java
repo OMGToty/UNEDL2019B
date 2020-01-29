@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -98,6 +99,7 @@ public class Test_Regla_Falsa_Tri extends JFrame{
     private JLabel lbl12;
     private JLabel lbl2;
     private JLabel lbl22;
+    private JLabel etiqueta;
     //Declaramos botones de accion.
     private JButton btnConfirmarIntervalos;
     private JButton btnConfirmarPiRadianes;
@@ -156,7 +158,12 @@ public class Test_Regla_Falsa_Tri extends JFrame{
         private String interDecimales;
         private int Decimales;
         
+        
     Test_Regla_Falsa_Tri(){
+          etiqueta = new JLabel(new ImageIcon(getClass().getResource("Rubia.jpg")));
+        etiqueta.setBounds(20,20,300,700);
+        etiqueta.setLocation(150,150);
+        etiqueta.setVisible(true);
         //setSize(930, 230); //Tamaño
 	setTitle(" Método de Regla Falsa Trigonométrica "); //Titulo
         setLayout(null);
@@ -239,6 +246,7 @@ public class Test_Regla_Falsa_Tri extends JFrame{
         
         //Agregamos los campos de las ventanas para los intervalos
         //Inicializamos los label
+        
         lblRadian = new JLabel("Radianes");
         lblPiRadian = new JLabel("Pi Radianes");
         lblSexagesimales = new JLabel("Grados Sexagesimales");
@@ -487,6 +495,7 @@ public class Test_Regla_Falsa_Tri extends JFrame{
         
         add(btnCalcular);
         setVisible(true); //Mostrar ventana
+      
         //pack();
         
         btnConfirmarIntervalos.addActionListener(new ActionListener() { //Agregamos una accion al boton
@@ -776,6 +785,7 @@ public class Test_Regla_Falsa_Tri extends JFrame{
                         IntervaloA = Metodo.recortarDecimales(IntervaloA, Decimales);
                         IntervaloB = Metodo.recortarDecimales(IntervaloB, Decimales);
                     }
+                  
                     
                     //Obtenemos el error
                     Error = Double.parseDouble(txtError.getText());
@@ -831,7 +841,7 @@ public class Test_Regla_Falsa_Tri extends JFrame{
     
     public static void main(String[] args) {
         Test_Regla_Falsa_Tri ventana = new Test_Regla_Falsa_Tri();
-        
+      
         //Llamamos los metodos para validar nuestros caracteres en
         ventana.validarCaracteres(txtX6);
         ventana.validarCaracteres(txtX5);

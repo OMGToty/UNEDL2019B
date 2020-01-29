@@ -1,0 +1,9 @@
+C:\Users\bab2p\source\repos\Examen\Examen\bin\Debug\Examen.exe.config
+C:\Users\bab2p\source\repos\Examen\Examen\bin\Debug\Examen.exe
+C:\Users\bab2p\source\repos\Examen\Examen\bin\Debug\Examen.pdb
+C:\Users\bab2p\source\repos\Examen\Examen\obj\Debug\Examen.csprojAssemblyReference.cache
+C:\Users\bab2p\source\repos\Examen\Examen\obj\Debug\Examen.Form1.resources
+C:\Users\bab2p\source\repos\Examen\Examen\obj\Debug\Examen.Properties.Resources.resources
+C:\Users\bab2p\source\repos\Examen\Examen\obj\Debug\Examen.csproj.GenerateResource.cache
+C:\Users\bab2p\source\repos\Examen\Examen\obj\Debug\Examen.exe
+C:\Users\bab2p\source\repos\Examen\Examen\obj\Debug\Examen.pdb
